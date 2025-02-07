@@ -1,0 +1,323 @@
+{
+	"info": {
+		"_postman_id": "4d0660a2-1102-48ba-b0f0-a06d694ab130",
+		"name": "API-Vespertina",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "12536023"
+	},
+	"item": [
+		{
+			"name": "Auth",
+			"item": [
+				{
+					"name": "Register",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"value": "Joséss",
+									"type": "text"
+								},
+								{
+									"key": "surname",
+									"value": "Balenciagass",
+									"type": "text"
+								},
+								{
+									"key": "username",
+									"value": "jbalenciaga3",
+									"type": "text"
+								},
+								{
+									"key": "email",
+									"value": "jbalenciaga3@gmail.es",
+									"type": "text"
+								},
+								{
+									"key": "phone",
+									"value": "22160098",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "1234",
+									"type": "text"
+								},
+								{
+									"key": "role",
+									"value": "ADMIN_ROLE",
+									"type": "text"
+								},
+								{
+									"key": "profilePicture",
+									"type": "file",
+									"src": "postman-cloud:///1ef4dc1f-9b79-4680-a529-ea114dc8ffeb"
+								}
+							]
+						},
+						"url": "http://127.0.0.1:3001/adoptionSystem/v1/auth/register"
+					},
+					"response": []
+				},
+				{
+					"name": "Login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"value": "Joséss",
+									"type": "text"
+								},
+								{
+									"key": "surname",
+									"value": "Balenciagass",
+									"type": "text"
+								},
+								{
+									"key": "username",
+									"value": "jbalenciaga3",
+									"type": "text"
+								},
+								{
+									"key": "email",
+									"value": "jbalenciaga3@gmail.es",
+									"type": "text"
+								},
+								{
+									"key": "phone",
+									"value": "22160098",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "1234",
+									"type": "text"
+								},
+								{
+									"key": "role",
+									"value": "ADMIN_ROLE",
+									"type": "text"
+								},
+								{
+									"key": "profilePicture",
+									"type": "file",
+									"src": "postman-cloud:///1ef4dc1f-9b79-4680-a529-ea114dc8ffeb"
+								}
+							]
+						},
+						"url": "http://127.0.0.1:3001/adoptionSystem/v1/auth/register"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Users",
+			"item": [
+				{
+					"name": "Buscar un usuario por ID",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				},
+				{
+					"name": "Eliminar ususario",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": "http://127.0.0.1:3001/adoptionSystem/v1/user/findUser/679cedc00c50f098afb74105"
+					},
+					"response": []
+				},
+				{
+					"name": "Listar Usuarios",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				},
+				{
+					"name": "Actualizar contraseña",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"newPassword\":\"12345678\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://127.0.0.1:3001/adoptionSystem/v1/user/updatePassword/679cef6b0a9ac952c4552d76"
+					},
+					"response": []
+				},
+				{
+					"name": "Actualizar usuario",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"value": "Joséss",
+									"type": "text"
+								},
+								{
+									"key": "surname",
+									"value": "Balenciagass",
+									"type": "text"
+								},
+								{
+									"key": "username",
+									"value": "jbalenciaga3",
+									"type": "text"
+								},
+								{
+									"key": "email",
+									"value": "jbalenciaga3@gmail.es",
+									"type": "text"
+								},
+								{
+									"key": "phone",
+									"value": "22160098",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "1234",
+									"type": "text"
+								},
+								{
+									"key": "role",
+									"value": "ADMIN_ROLE",
+									"type": "text"
+								},
+								{
+									"key": "profilePicture",
+									"type": "file",
+									"src": "postman-cloud:///1ef4dc1f-9b79-4680-a529-ea114dc8ffeb"
+								}
+							]
+						},
+						"url": "http://127.0.0.1:3001/adoptionSystem/v1/user/updateUser"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Pets",
+			"item": [
+				{
+					"name": "Buscar mascota por ID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "http://127.0.0.1:3001/adoptionSystem/v1/pet/findPet/67a12b26af19e9044c8341da"
+					},
+					"response": []
+				},
+				{
+					"name": "Eliminar mascota",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": "http://127.0.0.1:3001/adoptionSystem/v1/pet/deletePet/679cedc00c50f098afb74105"
+					},
+					"response": []
+				},
+				{
+					"name": "Listar mascotas",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				},
+				{
+					"name": "Agregar mascota",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"value": "Joséss",
+									"type": "text"
+								},
+								{
+									"key": "surname",
+									"value": "Balenciagass",
+									"type": "text"
+								},
+								{
+									"key": "username",
+									"value": "jbalenciaga3",
+									"type": "text"
+								},
+								{
+									"key": "email",
+									"value": "jbalenciaga3@gmail.es",
+									"type": "text"
+								},
+								{
+									"key": "phone",
+									"value": "22160098",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "1234",
+									"type": "text"
+								},
+								{
+									"key": "role",
+									"value": "ADMIN_ROLE",
+									"type": "text"
+								},
+								{
+									"key": "profilePicture",
+									"type": "file",
+									"src": "postman-cloud:///1ef4dc1f-9b79-4680-a529-ea114dc8ffeb"
+								}
+							]
+						},
+						"url": "http://127.0.0.1:3001/adoptionSystem/v1/auth/register"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Appointment",
+			"item": [
+				{
+					"name": "Agregar una cita",
+					"request": {
+						"method": "POST",
+						"header": []
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
